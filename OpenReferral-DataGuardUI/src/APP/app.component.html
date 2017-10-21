@@ -16,14 +16,14 @@
 
 
 
-<md-sidenav-container class="example-container">
-    <md-sidenav #sidenav class="example-sidenav" mode="side" opened="true" disableClose="true" isFocusTrapEnabled="false">
+<mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav class="example-sidenav" mode="side" opened="true" disableClose="true" isFocusTrapEnabled="false">
         <div *ngFor="let i of conflicts">
             <li style="padding-bottom: 10px">
                 <a (click)="navigate(i)" style="cursor:pointer"> {{i}} </a>
             </li>
         </div>
-    </md-sidenav>
+    </mat-sidenav>
 
     <div class="example-sidenav-content" style="display:flex;flex-flow:row wrap; width:100%" *ngFor="let keyValue of keyValues">
         <!--div class="example-scrolling-content">
@@ -32,27 +32,27 @@
             </div>
         </div-->
 
-        <md-card class="example-card" *ngFor="let item of keyValue.value" style="width:600px;margin:10px">
-            <md-card-header>
-                <md-card-title>{{item.key}}</md-card-title>
+        <mat-card class="example-card" *ngFor="let item of keyValue.value" style="width:600px;margin:10px">
+            <mat-card-header>
+                <mat-card-title>{{item.key}}</mat-card-title>
 
-            </md-card-header>
+            </mat-card-header>
 
-            <md-card-content>
+            <mat-card-content>
                 <p>
                     <recursive-node [node]=item></recursive-node>
                 </p>
-            </md-card-content>
-            <md-card-actions>
-                <button md-button><md-icon>ic_thumb_up</md-icon></button>
-                <button md-button><md-icon>ic_thumb_down</md-icon></button>
-                <button md-button><md-icon>ic_file_download</md-icon></button>
-                <button md-button><md-icon>ic_email</md-icon></button>
-                <button md-button><md-icon>ic_phone</md-icon></button>
-                <button md-button><md-icon>ic_check</md-icon></button>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button><mat-icon>ic_thumb_up</mat-icon></button>
+                <button mat-button><mat-icon>ic_thumb_down</mat-icon></button>
+                <button mat-button><mat-icon>ic_file_download</mat-icon></button>
+                <button mat-button><mat-icon>ic_email</mat-icon></button>
+                <button mat-button><mat-icon>ic_phone</mat-icon></button>
+                <button mat-button><mat-icon>ic_check</mat-icon></button>
 
-            </md-card-actions>
-        </md-card>
+            </mat-card-actions>
+        </mat-card>
 
 
     </div>
@@ -60,4 +60,4 @@
 
 
 
-</md-sidenav-container>
+</mat-sidenav-container>
